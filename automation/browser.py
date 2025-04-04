@@ -118,107 +118,27 @@ class Browser:
             bool: Trạng thái đăng nhập
         """
         try:
-            self.logger.info("Đang đăng nhập vào Google...")
-            self.driver.get("https://accounts.google.com/signin")
+            logging.info("Đang tìm trường nhập email...")
+            # Cách tốt nhất: Tìm theo ID cụ thể
+            email_input = wait.until(EC.presence_of_element_located((By.ID, "identifierId")))
+            logging.info("Tìm thấy input email bằng ID")
             
-            # Đợi trang tải với thời gian biến đổi
-            time.sleep(random.uniform(2.0, 4.0))
-            self.screenshot("login_page.png")
+            # Mô phỏng người dùng click vào trường nhập
+            human_move_and_click(driver, email_input)
+            time.sleep(random.uniform(0.5, 1.0))
             
-            # Nhập email
-            self.logger.info("Đang tìm trường nhập email...")
-            email_input = self.find_element_from_candidates(LOGIN_SELECTORS['email_input'])
+            # Nhập email với hành vi người dùng
+            logging.info(f"Đang nhập email: {EMAIL}")
+            human_type(email_input, EMAIL)
             
-            if email_input:
-                UserSimulation.human_move_and_click(self.driver, email_input)
-                time.sleep(random.uniform(0.5, 1.0))
-                
-                # Xóa giá trị hiện tại nếu có
-                current_value = email_input.get_attribute("value")
-                if current_value:
-                    for _ in range(len(current_value)):
-                        email_input.send_keys(Keys.BACKSPACE)
-                        time.sleep(random.uniform(0.05, 0.15))
-                
-                # Nhập email
-                self.logger.info(f"Đang nhập email: {email}")
-                UserSimulation.human_type(email_input, email)
-                time.sleep(random.uniform(0.5, 1.5))
-                self.screenshot("after_email_input.png")
-                
-                # Mô phỏng thao tác ngẫu nhiên
-                UserSimulation.simulate_random_actions(self.driver)
-                
-                # Click nút Next
-                next_button = self.find_element_from_candidates(LOGIN_SELECTORS['email_next_button'])
-                if next_button:
-                    self.logger.info("Đã tìm thấy nút Next, chuẩn bị click...")
-                    UserSimulation.human_move_and_click(self.driver, next_button)
-                    self.logger.info("Đã click nút Next sau khi nhập email")
-                else:
-                    self.logger.error("Không tìm thấy nút Next sau khi nhập email")
-                    self.screenshot("no_next_button.png")
-                    return False
-            else:
-                self.logger.error("Không tìm thấy trường nhập email")
-                self.screenshot("no_email_field.png")
-                return False
-            
-            # Đợi trang mật khẩu
-            time.sleep(random.uniform(3.0, 5.0))
-            self.screenshot("password_page.png")
-            
-            # Nhập mật khẩu
-            self.logger.info("Đang chờ màn hình nhập mật khẩu...")
-            password_input = self.find_element_from_candidates(LOGIN_SELECTORS['password_input'])
-            
-            if password_input:
-                UserSimulation.human_move_and_click(self.driver, password_input)
-                time.sleep(random.uniform(0.5, 1.0))
-                
-                # Xóa giá trị hiện tại nếu có
-                current_value = password_input.get_attribute("value")
-                if current_value:
-                    for _ in range(len(current_value)):
-                        password_input.send_keys(Keys.BACKSPACE)
-                        time.sleep(random.uniform(0.05, 0.15))
-                
-                # Nhập mật khẩu
-                self.logger.info("Đang nhập mật khẩu...")
-                UserSimulation.human_type(password_input, password)
-                time.sleep(random.uniform(0.5, 1.5))
-                self.screenshot("after_password_input.png")
-                
-                # Mô phỏng thao tác ngẫu nhiên
-                UserSimulation.simulate_random_actions(self.driver)
-                
-                # Click nút Next
-                next_button = self.find_element_from_candidates(LOGIN_SELECTORS['password_next_button'])
-                if next_button:
-                    self.logger.info("Đã tìm thấy nút Next sau password, chuẩn bị click...")
-                    UserSimulation.human_move_and_click(self.driver, next_button)
-                    self.logger.info("Đã click nút Next sau khi nhập mật khẩu")
-                else:
-                    self.logger.error("Không tìm thấy nút Next sau khi nhập mật khẩu")
-                    self.screenshot("no_password_next_button.png")
-                    return False
-            else:
-                self.logger.error("Không tìm thấy trường nhập mật khẩu")
-                self.screenshot("no_password_field.png")
-                return False
-            
-            # Chờ đăng nhập thành công
-            self.logger.info("Chờ đăng nhập hoàn tất...")
-            time.sleep(random.uniform(7.0, 12.0))
-            self.screenshot("after_login.png")
-            
-            return True
-            
+            # Tìm nút Next theo ID chính xác
+            next_button = wait.until(EC.element_to_be_clickable((By.ID, "identifierNext")))
+            human_move_and_click(driver, next_button)
+            logging.info("Đã click nút Next sau khi nhập email")
+
         except Exception as e:
-            self.logger.error(f"Lỗi khi đăng nhập: {str(e)}")
-            self.logger.error(traceback.format_exc())
-            self.screenshot("login_error.png")
-            return False
+            logging.error(f"Lỗi khi nhập email: {str(e)}")
+            driver.save_screenshot("email_input_error.png")
     
     def visit_photos_homepage(self):
         """Truy cập trang chủ Google Photos."""
