@@ -1,0 +1,559 @@
+2025-04-04 07:46:39,769 - INFO - Đang khởi tạo WebDriver...
+2025-04-04 07:46:39,770 - INFO - ====== WebDriver manager ======
+2025-04-04 07:46:39,873 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 07:46:39,890 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 07:46:39,908 - INFO - There is no [linux64] chromedriver "135.0.7049.42" for browser google-chrome "135.0.7049" in cache
+2025-04-04 07:46:39,908 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 07:46:39,978 - INFO - WebDriver version 135.0.7049.42 selected
+2025-04-04 07:46:39,985 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/135.0.7049.42/linux64/chromedriver-linux64.zip
+2025-04-04 07:46:39,985 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/135.0.7049.42/linux64/chromedriver-linux64.zip
+2025-04-04 07:46:39,999 - INFO - Driver downloading response is 200
+2025-04-04 07:46:40,070 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 07:46:40,256 - INFO - Driver has been saved in cache [/home/tthau/.wdm/drivers/chromedriver/linux64/135.0.7049.42]
+2025-04-04 07:46:40,631 - INFO - Đang đăng nhập vào Google...
+2025-04-04 07:46:41,515 - INFO - Đang nhập mật khẩu...
+2025-04-04 07:47:01,575 - ERROR - Lỗi không xác định: Message: 
+Stacktrace:
+#0 0x5ff693164e6a <unknown>
+#1 0x5ff692c16640 <unknown>
+#2 0x5ff692c67b5a <unknown>
+#3 0x5ff692c67d51 <unknown>
+#4 0x5ff692cb6344 <unknown>
+#5 0x5ff692c8d77d <unknown>
+#6 0x5ff692cb37b5 <unknown>
+#7 0x5ff692c8d523 <unknown>
+#8 0x5ff692c59ef3 <unknown>
+#9 0x5ff692c5ab51 <unknown>
+#10 0x5ff693129d2b <unknown>
+#11 0x5ff69312dc01 <unknown>
+#12 0x5ff693111512 <unknown>
+#13 0x5ff69312e774 <unknown>
+#14 0x5ff6930f590f <unknown>
+#15 0x5ff693152fb8 <unknown>
+#16 0x5ff693153196 <unknown>
+#17 0x5ff693163cb6 <unknown>
+#18 0x76ae19094ac3 <unknown>
+
+2025-04-04 07:47:01,643 - INFO - Đã đóng WebDriver
+2025-04-04 07:53:23,380 - INFO - Đang khởi tạo WebDriver...
+2025-04-04 07:53:23,380 - INFO - ====== WebDriver manager ======
+2025-04-04 07:53:23,484 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 07:53:23,503 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 07:53:23,520 - INFO - Driver [/home/tthau/.wdm/drivers/chromedriver/linux64/135.0.7049.42/chromedriver-linux64/chromedriver] found in cache
+2025-04-04 07:53:23,827 - INFO - Đang đăng nhập vào Google...
+2025-04-04 07:53:24,677 - INFO - Đang nhập mật khẩu...
+2025-04-04 07:53:44,995 - ERROR - Lỗi không xác định: Message: 
+Stacktrace:
+#0 0x5b40d0ed5e6a <unknown>
+#1 0x5b40d0987640 <unknown>
+#2 0x5b40d09d8b5a <unknown>
+#3 0x5b40d09d8d51 <unknown>
+#4 0x5b40d0a27344 <unknown>
+#5 0x5b40d09fe77d <unknown>
+#6 0x5b40d0a247b5 <unknown>
+#7 0x5b40d09fe523 <unknown>
+#8 0x5b40d09caef3 <unknown>
+#9 0x5b40d09cbb51 <unknown>
+#10 0x5b40d0e9ad2b <unknown>
+#11 0x5b40d0e9ec01 <unknown>
+#12 0x5b40d0e82512 <unknown>
+#13 0x5b40d0e9f774 <unknown>
+#14 0x5b40d0e6690f <unknown>
+#15 0x5b40d0ec3fb8 <unknown>
+#16 0x5b40d0ec4196 <unknown>
+#17 0x5b40d0ed4cb6 <unknown>
+#18 0x7fbc13a94ac3 <unknown>
+
+2025-04-04 07:53:45,058 - INFO - Đã đóng WebDriver
+2025-04-04 08:01:53,042 - INFO - Đang khởi tạo WebDriver...
+2025-04-04 08:01:53,042 - INFO - ====== WebDriver manager ======
+2025-04-04 08:01:53,127 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 08:01:53,144 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 08:01:53,159 - INFO - Driver [/home/tthau/.wdm/drivers/chromedriver/linux64/135.0.7049.42/chromedriver-linux64/chromedriver] found in cache
+2025-04-04 08:01:53,464 - INFO - Đang đăng nhập vào Google...
+2025-04-04 08:01:54,495 - INFO - Đang tìm trường nhập email...
+2025-04-04 08:01:54,533 - INFO - Tìm thấy input email bằng ID
+2025-04-04 08:01:55,211 - INFO - Đã click nút Next sau khi nhập email
+2025-04-04 08:01:55,211 - INFO - Đang chờ màn hình nhập mật khẩu...
+2025-04-04 08:02:30,500 - INFO - Không tìm thấy input password bằng Name, thử cách khác...
+2025-04-04 08:03:00,690 - INFO - Không tìm thấy input password bằng XPath type
+2025-04-04 08:03:30,907 - INFO - Không tìm thấy input password bằng aria-label
+2025-04-04 08:03:30,928 - INFO - Tìm thấy 8 input elements trên trang
+2025-04-04 08:03:31,000 - INFO - Input #0: {'id': 'identifierId', 'name': 'identifier', 'type': 'email', 'aria-label': 'Email or phone', 'placeholder': ''}
+2025-04-04 08:03:31,029 - INFO - Input #1: {'id': '', 'name': 'hiddenPassword', 'type': 'password', 'aria-label': None, 'placeholder': ''}
+2025-04-04 08:03:31,058 - INFO - Input #2: {'id': 'ca', 'name': 'ca', 'type': 'text', 'aria-label': 'Type the text you hear or see', 'placeholder': ''}
+2025-04-04 08:03:31,084 - INFO - Input #3: {'id': 'ct', 'name': 'ct', 'type': 'hidden', 'aria-label': None, 'placeholder': ''}
+2025-04-04 08:03:31,110 - INFO - Input #4: {'id': '', 'name': 'usi', 'type': 'hidden', 'aria-label': None, 'placeholder': ''}
+2025-04-04 08:03:31,137 - INFO - Input #5: {'id': '', 'name': 'domain', 'type': 'hidden', 'aria-label': None, 'placeholder': ''}
+2025-04-04 08:03:31,166 - INFO - Input #6: {'id': '', 'name': 'region', 'type': 'hidden', 'aria-label': None, 'placeholder': ''}
+2025-04-04 08:03:31,193 - INFO - Input #7: {'id': 'fidoUserHandle', 'name': '', 'type': 'hidden', 'aria-label': None, 'placeholder': ''}
+2025-04-04 08:03:31,204 - INFO - Sử dụng input có type=password
+2025-04-04 08:03:31,230 - ERROR - Lỗi khi nhập mật khẩu: Message: element not interactable
+  (Session info: chrome=135.0.7049.52)
+Stacktrace:
+#0 0x60aaaa635e6a <unknown>
+#1 0x60aaaa0e7493 <unknown>
+#2 0x60aaaa12eff2 <unknown>
+#3 0x60aaaa15e752 <unknown>
+#4 0x60aaaa12c4fa <unknown>
+#5 0x60aaaa15e91e <unknown>
+#6 0x60aaaa1847b5 <unknown>
+#7 0x60aaaa15e523 <unknown>
+#8 0x60aaaa12aef3 <unknown>
+#9 0x60aaaa12bb51 <unknown>
+#10 0x60aaaa5fad2b <unknown>
+#11 0x60aaaa5fec01 <unknown>
+#12 0x60aaaa5e2512 <unknown>
+#13 0x60aaaa5ff774 <unknown>
+#14 0x60aaaa5c690f <unknown>
+#15 0x60aaaa623fb8 <unknown>
+#16 0x60aaaa624196 <unknown>
+#17 0x60aaaa634cb6 <unknown>
+#18 0x77414bc94ac3 <unknown>
+
+2025-04-04 08:03:31,371 - INFO - Chờ đăng nhập hoàn tất...
+2025-04-04 08:03:41,528 - INFO - Đang truy cập album: https://photos.google.com/u/4/share/AF1QipNtdMlRS1ongp0jV4HOZ1_HNSFeJQujLVX6Z5zqWMYxj3RIZ62PXehf8JuZtwmlIA
+2025-04-04 08:03:52,240 - INFO - Đã chụp ảnh màn hình trang album
+2025-04-04 08:03:52,240 - INFO - Tìm nút 'Lưu ảnh'...
+2025-04-04 08:03:52,254 - INFO - Tìm thấy 0 buttons trên trang album
+2025-04-04 08:03:52,280 - ERROR - Không tìm thấy nút 'Lưu ảnh'
+2025-04-04 08:03:52,286 - ERROR - Không tìm thấy nút 'Lưu ảnh' bằng JavaScript
+2025-04-04 08:03:52,286 - INFO - Hoàn thành thao tác!
+2025-04-04 08:03:53,365 - INFO - Đã đóng WebDriver
+2025-04-04 08:04:52,205 - INFO - Đang khởi tạo WebDriver...
+2025-04-04 08:04:52,205 - INFO - ====== WebDriver manager ======
+2025-04-04 08:04:52,288 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 08:04:52,306 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 08:04:52,338 - INFO - Driver [/home/tthau/.wdm/drivers/chromedriver/linux64/135.0.7049.42/chromedriver-linux64/chromedriver] found in cache
+2025-04-04 08:04:52,661 - INFO - Đang đăng nhập vào Google...
+2025-04-04 08:04:53,786 - INFO - Đang tìm trường nhập email...
+2025-04-04 08:04:53,838 - INFO - Tìm thấy input email bằng ID
+2025-04-04 08:04:54,556 - INFO - Đã click nút Next sau khi nhập email
+2025-04-04 08:04:54,556 - INFO - Đang chờ màn hình nhập mật khẩu...
+2025-04-04 08:04:59,736 - INFO - Tìm thấy input password bằng Name
+2025-04-04 08:05:00,240 - INFO - Đã click nút Next sau khi nhập mật khẩu
+2025-04-04 08:05:00,240 - INFO - Chờ đăng nhập hoàn tất...
+2025-04-04 08:05:10,412 - INFO - Đang truy cập album: https://photos.google.com/u/4/share/AF1QipNtdMlRS1ongp0jV4HOZ1_HNSFeJQujLVX6Z5zqWMYxj3RIZ62PXehf8JuZtwmlIA
+2025-04-04 08:05:20,982 - INFO - Đã chụp ảnh màn hình trang album
+2025-04-04 08:05:20,982 - INFO - Tìm nút 'Lưu ảnh'...
+2025-04-04 08:05:21,008 - INFO - Tìm thấy 0 buttons trên trang album
+2025-04-04 08:05:21,049 - ERROR - Không tìm thấy nút 'Lưu ảnh'
+2025-04-04 08:05:21,068 - ERROR - Không tìm thấy nút 'Lưu ảnh' bằng JavaScript
+2025-04-04 08:05:21,068 - INFO - Hoàn thành thao tác!
+2025-04-04 08:05:21,137 - INFO - Đã đóng WebDriver
+2025-04-04 08:07:56,329 - INFO - Đang khởi tạo WebDriver...
+2025-04-04 08:07:56,330 - INFO - ====== WebDriver manager ======
+2025-04-04 08:07:56,461 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 08:07:56,480 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 08:07:56,495 - INFO - Driver [/home/tthau/.wdm/drivers/chromedriver/linux64/135.0.7049.42/chromedriver-linux64/chromedriver] found in cache
+2025-04-04 08:07:56,848 - INFO - Đang đăng nhập vào Google...
+2025-04-04 08:07:57,959 - INFO - Đang tìm trường nhập email...
+2025-04-04 08:07:57,996 - INFO - Tìm thấy input email bằng ID
+2025-04-04 08:07:58,724 - INFO - Đã click nút Next sau khi nhập email
+2025-04-04 08:07:58,724 - INFO - Đang chờ màn hình nhập mật khẩu...
+2025-04-04 08:08:34,198 - INFO - Không tìm thấy input password bằng Name, thử cách khác...
+2025-04-04 08:09:04,492 - INFO - Không tìm thấy input password bằng XPath type
+2025-04-04 08:09:08,919 - INFO - Không tìm thấy input password bằng aria-label
+2025-04-04 08:09:08,920 - ERROR - Lỗi khi nhập mật khẩu: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-04-04 08:09:08,922 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72a1d6728df0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ad9ad6653c769bcc97ddefb4b89ab001/screenshot
+2025-04-04 08:09:08,922 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72a1d67288b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ad9ad6653c769bcc97ddefb4b89ab001/screenshot
+2025-04-04 08:09:08,923 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72a1d6728f70>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ad9ad6653c769bcc97ddefb4b89ab001/screenshot
+2025-04-04 08:09:08,923 - ERROR - Lỗi không xác định: HTTPConnectionPool(host='localhost', port=50807): Max retries exceeded with url: /session/ad9ad6653c769bcc97ddefb4b89ab001/screenshot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72a1d67290c0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-04-04 08:09:08,938 - ERROR - Traceback (most recent call last):
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connection.py", line 464, in getresponse
+    httplib_response = super().getresponse()
+  File "/usr/lib/python3.10/http/client.py", line 1375, in getresponse
+    response.begin()
+  File "/usr/lib/python3.10/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.10/http/client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tthau/PROJECT/BKGGPT/clone_album.py", line 197, in <module>
+    all_inputs = driver.find_elements(By.TAG_NAME, "input")
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 936, in find_elements
+    return self.execute(Command.FIND_ELEMENTS, {"using": by, "value": value})["value"] or []
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 427, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/_request_methods.py", line 144, in request
+    return self.request_encode_body(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/_request_methods.py", line 279, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/poolmanager.py", line 443, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/util/retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/util/util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connection.py", line 464, in getresponse
+    httplib_response = super().getresponse()
+  File "/usr/lib/python3.10/http/client.py", line 1375, in getresponse
+    response.begin()
+  File "/usr/lib/python3.10/http/client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.10/http/client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connection.py", line 196, in _new_conn
+    sock = connection.create_connection(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connection.py", line 398, in request
+    self.endheaders()
+  File "/usr/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connection.py", line 236, in connect
+    self.sock = self._new_conn()
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x72a1d67290c0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tthau/PROJECT/BKGGPT/clone_album.py", line 254, in <module>
+    driver.save_screenshot("password_input_error.png")
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 994, in save_screenshot
+    return self.get_screenshot_as_file(filename)
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 969, in get_screenshot_as_file
+    png = self.get_screenshot_as_png()
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 1003, in get_screenshot_as_png
+    return b64decode(self.get_screenshot_as_base64().encode("ascii"))
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 1013, in get_screenshot_as_base64
+    return self.execute(Command.SCREENSHOT)["value"]
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 427, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/_request_methods.py", line 136, in request
+    return self.request_encode_url(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/_request_methods.py", line 183, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/poolmanager.py", line 443, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 873, in urlopen
+    return self.urlopen(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 873, in urlopen
+    return self.urlopen(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 873, in urlopen
+    return self.urlopen(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=50807): Max retries exceeded with url: /session/ad9ad6653c769bcc97ddefb4b89ab001/screenshot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72a1d67290c0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+2025-04-04 08:09:08,940 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72a1d6729540>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ad9ad6653c769bcc97ddefb4b89ab001/screenshot
+2025-04-04 08:09:08,940 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72a1d67296c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ad9ad6653c769bcc97ddefb4b89ab001/screenshot
+2025-04-04 08:09:08,941 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72a1d6729810>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ad9ad6653c769bcc97ddefb4b89ab001/screenshot
+2025-04-04 08:09:08,942 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72a1d6729ae0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ad9ad6653c769bcc97ddefb4b89ab001
+2025-04-04 08:09:08,943 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72a1d6729c30>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ad9ad6653c769bcc97ddefb4b89ab001
+2025-04-04 08:09:08,946 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x72a1d6729d80>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ad9ad6653c769bcc97ddefb4b89ab001
+2025-04-04 08:09:08,950 - INFO - Đã đóng WebDriver
+2025-04-04 09:37:30,459 - INFO - Đang khởi tạo WebDriver...
+2025-04-04 09:37:30,459 - INFO - ====== WebDriver manager ======
+2025-04-04 09:37:30,590 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 09:37:30,619 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 09:37:30,636 - INFO - Driver [/home/tthau/.wdm/drivers/chromedriver/linux64/135.0.7049.42/chromedriver-linux64/chromedriver] found in cache
+2025-04-04 09:37:32,402 - INFO - Đang đăng nhập vào Google...
+2025-04-04 09:37:37,661 - INFO - Đang tìm trường nhập email...
+2025-04-04 09:37:37,676 - INFO - Tìm thấy input email bằng ID
+2025-04-04 09:37:39,507 - INFO - Đang nhập email: trunghautran0102travel@gmail.com
+2025-04-04 09:37:49,375 - INFO - Đã tìm thấy nút Next, chuẩn bị click...
+2025-04-04 09:37:50,513 - INFO - Đã click nút Next sau khi nhập email
+2025-04-04 09:37:55,272 - INFO - Đang chờ màn hình nhập mật khẩu...
+2025-04-04 09:38:14,324 - INFO - Không tìm thấy input password bằng Name, thử cách khác...
+2025-04-04 09:38:14,325 - INFO - Không tìm thấy input password bằng XPath type
+2025-04-04 09:38:14,327 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741d735d2e60>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5c3037b876a106c9b1369a9069e33b8d/element
+2025-04-04 09:38:14,327 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741d735d3070>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5c3037b876a106c9b1369a9069e33b8d/element
+2025-04-04 09:38:14,329 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741d735d3520>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5c3037b876a106c9b1369a9069e33b8d/element
+2025-04-04 09:38:14,330 - INFO - Không tìm thấy input password bằng aria-label
+2025-04-04 09:38:14,330 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741d735d3760>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5c3037b876a106c9b1369a9069e33b8d/elements
+2025-04-04 09:38:14,331 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741d735d3940>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5c3037b876a106c9b1369a9069e33b8d/elements
+2025-04-04 09:38:14,332 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741d735d3b50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5c3037b876a106c9b1369a9069e33b8d/elements
+2025-04-04 09:38:14,333 - ERROR - Lỗi khi nhập mật khẩu: HTTPConnectionPool(host='localhost', port=33723): Max retries exceeded with url: /session/5c3037b876a106c9b1369a9069e33b8d/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741d735d3d60>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-04-04 09:38:14,334 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741d735d3fd0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5c3037b876a106c9b1369a9069e33b8d/screenshot
+2025-04-04 09:38:14,334 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741d7344c190>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5c3037b876a106c9b1369a9069e33b8d/screenshot
+2025-04-04 09:38:14,335 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741d7344c310>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5c3037b876a106c9b1369a9069e33b8d/screenshot
+2025-04-04 09:38:14,335 - ERROR - Lỗi không xác định: HTTPConnectionPool(host='localhost', port=33723): Max retries exceeded with url: /session/5c3037b876a106c9b1369a9069e33b8d/screenshot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741d7344c490>: Failed to establish a new connection: [Errno 111] Connection refused'))
+2025-04-04 09:38:14,340 - ERROR - Traceback (most recent call last):
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connection.py", line 196, in _new_conn
+    sock = connection.create_connection(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connection.py", line 398, in request
+    self.endheaders()
+  File "/usr/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connection.py", line 236, in connect
+    self.sock = self._new_conn()
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x741d735d3d60>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tthau/PROJECT/BKGGPT/clone_album.py", line 334, in <module>
+    all_inputs = driver.find_elements(By.TAG_NAME, "input")
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 936, in find_elements
+    return self.execute(Command.FIND_ELEMENTS, {"using": by, "value": value})["value"] or []
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 427, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/_request_methods.py", line 144, in request
+    return self.request_encode_body(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/_request_methods.py", line 279, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/poolmanager.py", line 443, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 873, in urlopen
+    return self.urlopen(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 873, in urlopen
+    return self.urlopen(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 873, in urlopen
+    return self.urlopen(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=33723): Max retries exceeded with url: /session/5c3037b876a106c9b1369a9069e33b8d/elements (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741d735d3d60>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connection.py", line 196, in _new_conn
+    sock = connection.create_connection(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/util/connection.py", line 85, in create_connection
+    raise err
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 495, in _make_request
+    conn.request(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connection.py", line 398, in request
+    self.endheaders()
+  File "/usr/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connection.py", line 236, in connect
+    self.sock = self._new_conn()
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x741d7344c490>: Failed to establish a new connection: [Errno 111] Connection refused
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/tthau/PROJECT/BKGGPT/clone_album.py", line 410, in <module>
+    driver.save_screenshot("password_input_error.png")
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 994, in save_screenshot
+    return self.get_screenshot_as_file(filename)
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 969, in get_screenshot_as_file
+    png = self.get_screenshot_as_png()
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 1003, in get_screenshot_as_png
+    return b64decode(self.get_screenshot_as_base64().encode("ascii"))
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 1013, in get_screenshot_as_base64
+    return self.execute(Command.SCREENSHOT)["value"]
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 427, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 404, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py", line 428, in _request
+    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/_request_methods.py", line 136, in request
+    return self.request_encode_url(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/_request_methods.py", line 183, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/poolmanager.py", line 443, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 873, in urlopen
+    return self.urlopen(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 873, in urlopen
+    return self.urlopen(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 873, in urlopen
+    return self.urlopen(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+  File "/home/tthau/.local/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=33723): Max retries exceeded with url: /session/5c3037b876a106c9b1369a9069e33b8d/screenshot (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741d7344c490>: Failed to establish a new connection: [Errno 111] Connection refused'))
+
+2025-04-04 09:38:14,341 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741d7344c910>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5c3037b876a106c9b1369a9069e33b8d/screenshot
+2025-04-04 09:38:14,342 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741d7344c970>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5c3037b876a106c9b1369a9069e33b8d/screenshot
+2025-04-04 09:38:14,344 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741d7344cbe0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5c3037b876a106c9b1369a9069e33b8d/screenshot
+2025-04-04 09:38:14,345 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741d735d2e90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5c3037b876a106c9b1369a9069e33b8d
+2025-04-04 09:38:14,345 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741d7344cca0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5c3037b876a106c9b1369a9069e33b8d
+2025-04-04 09:38:14,346 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x741d7344ce20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5c3037b876a106c9b1369a9069e33b8d
+2025-04-04 09:38:14,348 - INFO - Đã đóng WebDriver
+2025-04-04 09:38:26,231 - INFO - Đang khởi tạo WebDriver...
+2025-04-04 09:38:26,231 - INFO - ====== WebDriver manager ======
+2025-04-04 09:38:26,324 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 09:38:26,340 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 09:38:26,354 - INFO - Driver [/home/tthau/.wdm/drivers/chromedriver/linux64/135.0.7049.42/chromedriver-linux64/chromedriver] found in cache
+2025-04-04 09:38:28,063 - INFO - Đang đăng nhập vào Google...
+2025-04-04 09:38:28,575 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(104, 'Connection reset by peer')': /session/6a7531871f2ec28ccc971fe0db5de685
+2025-04-04 09:38:28,576 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd41ed5ed10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/6a7531871f2ec28ccc971fe0db5de685
+2025-04-04 09:38:28,579 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fd41ed5ee60>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/6a7531871f2ec28ccc971fe0db5de685
+2025-04-04 09:38:28,582 - INFO - Đã đóng WebDriver
+2025-04-04 09:38:45,498 - INFO - Đang khởi tạo WebDriver...
+2025-04-04 09:38:45,499 - INFO - ====== WebDriver manager ======
+2025-04-04 09:38:45,598 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 09:38:45,620 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 09:38:45,644 - INFO - Driver [/home/tthau/.wdm/drivers/chromedriver/linux64/135.0.7049.42/chromedriver-linux64/chromedriver] found in cache
+2025-04-04 09:38:47,462 - INFO - Đang đăng nhập vào Google...
+2025-04-04 09:38:53,366 - INFO - Đang tìm trường nhập email...
+2025-04-04 09:38:53,385 - INFO - Tìm thấy input email bằng ID
+2025-04-04 09:38:55,636 - INFO - Đang nhập email: trunghautran0102travel1@gmail.com
+2025-04-04 09:39:04,196 - INFO - Đã tìm thấy nút Next, chuẩn bị click...
+2025-04-04 09:39:05,613 - INFO - Đã click nút Next sau khi nhập email
+2025-04-04 09:39:10,342 - INFO - Đang chờ màn hình nhập mật khẩu...
+2025-04-04 09:39:10,954 - INFO - Tìm thấy input password bằng Name
+2025-04-04 09:39:13,441 - INFO - Đang nhập mật khẩu...
+2025-04-04 09:39:19,535 - INFO - Đã tìm thấy nút Next sau password, chuẩn bị click...
+2025-04-04 09:39:20,094 - ERROR - Lỗi khi tìm hoặc click nút passwordNext: Message: move target out of bounds
+  (Session info: chrome=135.0.7049.52)
+Stacktrace:
+#0 0x580ef9a27e6a <unknown>
+#1 0x580ef94d9493 <unknown>
+#2 0x580ef957ef3e <unknown>
+#3 0x580ef9550752 <unknown>
+#4 0x580ef95767b5 <unknown>
+#5 0x580ef9550523 <unknown>
+#6 0x580ef951cef3 <unknown>
+#7 0x580ef951db51 <unknown>
+#8 0x580ef99ecd2b <unknown>
+#9 0x580ef99f0c01 <unknown>
+#10 0x580ef99d4512 <unknown>
+#11 0x580ef99f1774 <unknown>
+#12 0x580ef99b890f <unknown>
+#13 0x580ef9a15fb8 <unknown>
+#14 0x580ef9a16196 <unknown>
+#15 0x580ef9a26cb6 <unknown>
+#16 0x791bc3294ac3 <unknown>
+
+2025-04-04 09:39:20,712 - INFO - Chờ đăng nhập hoàn tất...
+2025-04-04 09:39:29,391 - INFO - Ghé thăm trang chủ Google Photos trước khi đi đến album...
+2025-04-04 09:39:42,769 - INFO - Đang truy cập album: https://photos.app.goo.gl/13SDgSLQNZvE9dDQA
+2025-04-04 09:39:54,943 - ERROR - Lỗi khi truy cập album: Message: move target out of bounds
+  (Session info: chrome=135.0.7049.52)
+Stacktrace:
+#0 0x580ef9a27e6a <unknown>
+#1 0x580ef94d9493 <unknown>
+#2 0x580ef957ef3e <unknown>
+#3 0x580ef9550752 <unknown>
+#4 0x580ef95767b5 <unknown>
+#5 0x580ef9550523 <unknown>
+#6 0x580ef951cef3 <unknown>
+#7 0x580ef951db51 <unknown>
+#8 0x580ef99ecd2b <unknown>
+#9 0x580ef99f0c01 <unknown>
+#10 0x580ef99d4512 <unknown>
+#11 0x580ef99f1774 <unknown>
+#12 0x580ef99b890f <unknown>
+#13 0x580ef9a15fb8 <unknown>
+#14 0x580ef9a16196 <unknown>
+#15 0x580ef9a26cb6 <unknown>
+#16 0x791bc3294ac3 <unknown>
+
+2025-04-04 09:39:54,944 - ERROR - Traceback (most recent call last):
+  File "/home/tthau/PROJECT/BKGGPT/clone_album.py", line 444, in <module>
+    actions.move_by_offset(random.randint(50, 300), random.randint(50, 300)).perform()
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/common/action_chains.py", line 94, in perform
+    self.w3c_actions.perform()
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/common/actions/action_builder.py", line 170, in perform
+    self.driver.execute(Command.W3C_ACTIONS, enc)
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 429, in execute
+    self.error_handler.check_response(response)
+  File "/home/tthau/.local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.MoveTargetOutOfBoundsException: Message: move target out of bounds
+  (Session info: chrome=135.0.7049.52)
+Stacktrace:
+#0 0x580ef9a27e6a <unknown>
+#1 0x580ef94d9493 <unknown>
+#2 0x580ef957ef3e <unknown>
+#3 0x580ef9550752 <unknown>
+#4 0x580ef95767b5 <unknown>
+#5 0x580ef9550523 <unknown>
+#6 0x580ef951cef3 <unknown>
+#7 0x580ef951db51 <unknown>
+#8 0x580ef99ecd2b <unknown>
+#9 0x580ef99f0c01 <unknown>
+#10 0x580ef99d4512 <unknown>
+#11 0x580ef99f1774 <unknown>
+#12 0x580ef99b890f <unknown>
+#13 0x580ef9a15fb8 <unknown>
+#14 0x580ef9a16196 <unknown>
+#15 0x580ef9a26cb6 <unknown>
+#16 0x791bc3294ac3 <unknown>
+
+
+2025-04-04 09:39:56,064 - INFO - Hoàn thành thao tác!
+2025-04-04 09:39:58,793 - INFO - Đã đóng WebDriver
