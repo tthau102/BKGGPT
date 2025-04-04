@@ -40,285 +40,6 @@ chrome_options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x
 chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
 chrome_options.add_experimental_option("useAutomationExtension", False)
 
-# Hàm chuyên biệt để click nút "Lưu ảnh"
-def click_save_button(driver, wait):
-    logging.info("Đang cố gắng click nút 'Lưu ảnh' bằng nhiều phương pháp...")
-    
-    # 1. Phương pháp sử dụng XPath chính xác từ HTML được cung cấp
-    xpath_patterns = [
-        # XPath rất cụ thể dựa trên cấu trúc đã biết
-        "//div[contains(@jscontroller, 'HqNShc')]/span/button[@aria-label='Lưu ảnh']",
-        
-        # XPath theo jslog
-        "//button[contains(@jslog, '14036')]",
-        
-        # XPath theo SVG icon đặc trưng
-        "//button[.//svg[contains(@class, 'aRBEtc')]]",
-        
-        # XPath kết hợp nhiều thuộc tính
-        "//div[contains(@class, 'gsCQqe')]/span/button",
-        
-        # Tất cả nút có aria-label="Lưu ảnh"
-        "//button[@aria-label='Lưu ảnh']"
-    ]
-    
-    save_button = None
-    for xpath in xpath_patterns:
-        try:
-            elements = driver.find_elements(By.XPATH, xpath)
-            for element in elements:
-                if element.is_displayed():
-                    save_button = element
-                    logging.info(f"Tìm thấy nút 'Lưu ảnh' bằng XPath: {xpath}")
-                    break
-            if save_button:
-                break
-        except Exception as e:
-            logging.info(f"Không tìm thấy nút với XPath {xpath}: {str(e)}")
-    
-    # 2. Nếu không tìm thấy bằng XPath, thử JavaScript với querySelector
-    if not save_button:
-        logging.info("Thử tìm nút 'Lưu ảnh' bằng JavaScript...")
-        try:
-            save_button = driver.execute_script("""
-                // CSS selector chính xác
-                let button = document.querySelector('div[jscontroller="HqNShc"] button[aria-label="Lưu ảnh"]');
-                if (!button) {
-                    // Thử các selectors khác
-                    button = document.querySelector('button[jslog="14036"]');
-                }
-                if (!button) {
-                    // Dựa vào nội dung SVG
-                    const buttons = Array.from(document.querySelectorAll('button'));
-                    button = buttons.find(btn => {
-                        const svg = btn.querySelector('svg.aRBEtc');
-                        return svg !== null;
-                    });
-                }
-                return button;
-            """)
-            if save_button:
-                logging.info("Tìm thấy nút 'Lưu ảnh' bằng JavaScript query selector")
-        except Exception as e:
-            logging.error(f"Lỗi khi tìm nút bằng JavaScript: {str(e)}")
-    
-    # 3. Nếu vẫn không tìm thấy, thử tạo một element mới từ HTML
-    if not save_button:
-        logging.info("Thử click nút 'Lưu ảnh' bằng innerHTML và dispatch event...")
-        try:
-            result = driver.execute_script("""
-                // Tìm container
-                const container = document.querySelector('.c9yG5b');
-                
-                if (container) {
-                    // Thử tìm nút Lưu ảnh trong container
-                    const saveButtonContainer = Array.from(container.querySelectorAll('div')).find(
-                        div => div.getAttribute('jscontroller') === 'HqNShc'
-                    );
-                    
-                    if (saveButtonContainer) {
-                        const button = saveButtonContainer.querySelector('button');
-                        if (button) {
-                            // Click bằng cách gọi trực tiếp các event handlers
-                            try {
-                                // Tạo và dispatch các events
-                                const mouseDown = new MouseEvent('mousedown', {
-                                    bubbles: true,
-                                    cancelable: true,
-                                    view: window
-                                });
-                                button.dispatchEvent(mouseDown);
-                                
-                                setTimeout(() => {
-                                    const mouseUp = new MouseEvent('mouseup', {
-                                        bubbles: true,
-                                        cancelable: true,
-                                        view: window
-                                    });
-                                    button.dispatchEvent(mouseUp);
-                                    
-                                    setTimeout(() => {
-                                        const click = new MouseEvent('click', {
-                                            bubbles: true,
-                                            cancelable: true,
-                                            view: window
-                                        });
-                                        button.dispatchEvent(click);
-                                    }, 50);
-                                }, 50);
-                                
-                                return true;
-                            } catch (e) {
-                                console.error('Error dispatching events:', e);
-                                return false;
-                            }
-                        }
-                    }
-                }
-                
-                // Nếu không tìm thấy, tạo và click phần tử trực tiếp
-                try {
-                    // Mô tả chính xác HTML của button từ DOM
-                    const buttonHtml = `
-                        <button class="pYTkkf-Bz112c-LgbsSe pYTkkf-Bz112c-LgbsSe-OWXEXe-SfQLQb-suEOdc KIqTIe cx6Jyd" jscontroller="PIVayb" jsaction="click:h5M12e; clickmod:h5M12e;" data-idom-class="KIqTIe cx6Jyd" data-use-native-focus-logic="true" jsname="LgbsSe" aria-label="Lưu ảnh" jslog="14036; track:JIbuQc">
-                            <span class="OiePBf-zPjgPe pYTkkf-Bz112c-UHGRz"></span>
-                            <span class="RBHQF-ksKsZd" jsname="m9ZlFb"></span>
-                            <span class="pYTkkf-Bz112c-kBDsod-Rtc0Jf" jsname="S5tZuc" aria-hidden="true">
-                                <span class="notranslate" aria-hidden="true">
-                                    <svg width="24px" height="24px" class="v1262d aRBEtc" jsname="K38HNd" viewBox="0 0 24 24">
-                                        <path d="M17.92 10.02C17.45 7.18 14.97 5 12 5 9.82 5 7.83 6.18 6.78 8.06 4.09 8.41 2 10.74 2 13.5 2 16.53 4.47 19 7.5 19h10c2.48 0 4.5-2.02 4.5-4.5a4.5 4.5 0 0 0-4.08-4.48zM17.5 17h-10C5.57 17 4 15.43 4 13.5a3.51 3.51 0 0 1 3.44-3.49l.64-.01.26-.59A3.975 3.975 0 0 1 12 7c2.21 0 4 1.79 4 4v1h1.5a2.5 2.5 0 0 1 0 5zm-3.41-5.91l1.41 1.41-2.79 2.79L12 16l-.71-.71L8.5 12.5l1.41-1.41L11 12.17V9.5h2v2.67l1.09-1.08z"></path>
-                                    </svg>
-                                </span>
-                            </span>
-                        </button>
-                    `;
-                    
-                    // Tìm các event handlers cho nút trong DOM
-                    const clickHandlers = (
-                        document.querySelector('button[jslog="14036"]')?.getAttribute('jsaction') || 
-                        'click:h5M12e'
-                    );
-                    
-                    // Kích hoạt trực tiếp hàm xử lý click được đăng ký
-                    const handlerFnName = clickHandlers.split('click:')[1]?.split(';')[0];
-                    if (handlerFnName && window[handlerFnName]) {
-                        window[handlerFnName]();
-                        return true;
-                    }
-                    
-                    return false;
-                } catch (e) {
-                    console.error('Error creating button:', e);
-                    return false;
-                }
-            """)
-            
-            if result:
-                logging.info("Đã kích hoạt nút 'Lưu ảnh' bằng JavaScript events")
-                time.sleep(5)
-                return True
-        except Exception as e:
-            logging.error(f"Lỗi khi tạo và kích hoạt nút bằng JavaScript: {str(e)}")
-    
-    # 4. Nếu tìm thấy nút, thử các cách click khác nhau
-    if save_button:
-        try:
-            # Thử cuộn đến nút
-            driver.execute_script("arguments[0].scrollIntoView({behavior: 'instant', block: 'center'});", save_button)
-            time.sleep(2)
-            
-            # 4.1. Thử click thông thường
-            try:
-                save_button.click()
-                logging.info("Đã click nút 'Lưu ảnh' thông thường")
-                time.sleep(3)
-                return True
-            except Exception as e:
-                logging.warning(f"Không thể click thông thường: {str(e)}")
-                
-                # 4.2. Thử click bằng JavaScript
-                try:
-                    driver.execute_script("arguments[0].click();", save_button)
-                    logging.info("Đã click nút 'Lưu ảnh' bằng JavaScript")
-                    time.sleep(3)
-                    return True
-                except Exception as e:
-                    logging.warning(f"Không thể click bằng JavaScript: {str(e)}")
-                    
-                    # 4.3. Thử click bằng ActionChains
-                    try:
-                        actions = ActionChains(driver)
-                        actions.move_to_element(save_button).pause(1).click().perform()
-                        logging.info("Đã click nút 'Lưu ảnh' bằng ActionChains")
-                        time.sleep(3)
-                        return True
-                    except Exception as e:
-                        logging.warning(f"Không thể click bằng ActionChains: {str(e)}")
-                        
-                        # 4.4. Thử với JavaScript cao cấp
-                        try:
-                            driver.execute_script("""
-                                const element = arguments[0];
-                                
-                                // Tạo các events DOM
-                                const mouseOverEvent = new MouseEvent('mouseover', {
-                                    'view': window,
-                                    'bubbles': true,
-                                    'cancelable': true
-                                });
-                                
-                                const mouseDownEvent = new MouseEvent('mousedown', {
-                                    'view': window,
-                                    'bubbles': true,
-                                    'cancelable': true
-                                });
-                                
-                                const mouseUpEvent = new MouseEvent('mouseup', {
-                                    'view': window,
-                                    'bubbles': true,
-                                    'cancelable': true
-                                });
-                                
-                                const clickEvent = new MouseEvent('click', {
-                                    'view': window,
-                                    'bubbles': true,
-                                    'cancelable': true
-                                });
-                                
-                                // Kích hoạt các events
-                                element.dispatchEvent(mouseOverEvent);
-                                
-                                setTimeout(() => {
-                                    element.dispatchEvent(mouseDownEvent);
-                                    
-                                    setTimeout(() => {
-                                        element.dispatchEvent(mouseUpEvent);
-                                        element.dispatchEvent(clickEvent);
-                                    }, 100);
-                                }, 100);
-                            """, save_button)
-                            logging.info("Đã kích hoạt nút 'Lưu ảnh' bằng JavaScript events")
-                            time.sleep(3)
-                            return True
-                        except Exception as e:
-                            logging.error(f"Không thể kích hoạt bằng JavaScript events: {str(e)}")
-        except Exception as e:
-            logging.error(f"Lỗi khi cố gắng click nút 'Lưu ảnh': {str(e)}")
-    
-    # 5. Phương pháp cuối cùng: Gọi trực tiếp hàm xử lý click của Google
-    try:
-        result = driver.execute_script("""
-            // Tìm controller HqNShc trong DOM
-            const controllerElement = document.querySelector('div[jscontroller="HqNShc"]');
-            if (controllerElement) {
-                // Thử kích hoạt hàm xử lý sự kiện KjsqPd của Google
-                if (typeof window.google !== 'undefined' && 
-                    window.google.ac && 
-                    window.google.ac.KjsqPd) {
-                    window.google.ac.KjsqPd(controllerElement);
-                    return true;
-                }
-                
-                // Tìm kiếm bất kỳ hàm xử lý nào được gắn vào controller
-                const protoHandler = controllerElement.__proto__.KjsqPd;
-                if (protoHandler) {
-                    protoHandler.call(controllerElement);
-                    return true;
-                }
-            }
-            return false;
-        """)
-        
-        if result:
-            logging.info("Đã kích hoạt hàm xử lý sự kiện bằng JavaScript")
-            time.sleep(3)
-            return True
-    except Exception as e:
-        logging.error(f"Không thể kích hoạt hàm xử lý sự kiện: {str(e)}")
-    
-    logging.error("Đã thử tất cả các phương pháp nhưng không thể click nút 'Lưu ảnh'")
-    return False
-
 try:
     # Khởi tạo WebDriver
     logging.info("Đang khởi tạo WebDriver...")
@@ -376,39 +97,162 @@ try:
     time.sleep(10)
     driver.save_screenshot("album_page.png")
     
-    # Chụp ảnh màn hình ban đầu
-    driver.save_screenshot("album_page_before.png")
+    # Tìm nút "Lưu ảnh" - thử nhiều cách
+    logging.info("Đang tìm nút 'Lưu ảnh'...")
     
-    # Gọi hàm click nút Lưu ảnh
-    success = click_save_button(driver, wait)
+    # XPaths phức tạp để tìm nút chính xác
+    save_button_xpaths = [
+        "//button[@aria-label='Lưu ảnh']",
+        "//button[contains(@jslog, '14036')]",
+        "//button[contains(@class, 'pYTkkf-Bz112c-LgbsSe') and @aria-label='Lưu ảnh']",
+        "//span[contains(@class, 'notranslate')]/svg[@class='v1262d aRBEtc']/ancestor::button",
+        "//div[contains(@jscontroller, 'HqNShc')]/span/button",
+        "//div[@class='DNAsC G6iPcb gsCQqe']/span/button"
+    ]
     
-    # Kiểm tra kết quả
-    if success:
-        # Đợi xử lý hoàn tất
-        time.sleep(5)
-        driver.save_screenshot("after_save_button_click.png")
-        
-        # Kiểm tra nếu thành công
+    save_button = None
+    for xpath in save_button_xpaths:
         try:
-            # Kiểm tra SVG "PRE5" không còn style="display: none"
-            saved_state = driver.execute_script("""
-                return document.querySelector('svg.PRE5').style.display !== 'none';
-            """)
-            
-            if saved_state:
-                logging.info("XÁC NHẬN: Đã lưu ảnh thành công!")
-            else:
-                logging.warning("Đã click nút nhưng không thể xác nhận trạng thái lưu")
+            elements = driver.find_elements(By.XPATH, xpath)
+            if elements:
+                for element in elements:
+                    if element.is_displayed():
+                        save_button = element
+                        logging.info(f"Tìm thấy nút Lưu ảnh với XPath: {xpath}")
+                        break
+            if save_button:
+                break
         except Exception as e:
-            logging.warning(f"Không thể kiểm tra trạng thái lưu: {str(e)}")
-    else:
-        logging.error("Không thể click nút 'Lưu ảnh'")
+            logging.info(f"Không tìm thấy nút bằng XPath {xpath}: {str(e)}")
     
-except Exception as e:
-    logging.error(f"Lỗi không xác định: {str(e)}")
-    logging.error(traceback.format_exc())
-    if 'driver' in locals():
-        driver.save_screenshot("error.png")
+    if not save_button:
+        # Tìm tất cả buttons hiển thị trên trang và log thông tin
+        logging.info("Không tìm thấy nút Lưu ảnh bằng XPath, tìm tất cả buttons hiển thị...")
+        buttons = driver.find_elements(By.TAG_NAME, "button")
+        visible_buttons = []
+        
+        for i, btn in enumerate(buttons):
+            if btn.is_displayed():
+                text = btn.text.strip() if btn.text else ""
+                aria_label = btn.get_attribute("aria-label") or ""
+                jslog = btn.get_attribute("jslog") or ""
+                class_name = btn.get_attribute("class") or ""
+                
+                button_info = {
+                    "index": i,
+                    "text": text,
+                    "aria_label": aria_label,
+                    "jslog": jslog,
+                    "class": class_name
+                }
+                
+                visible_buttons.append(button_info)
+                logging.info(f"Button #{i}: {json.dumps(button_info, ensure_ascii=False)}")
+                
+                # Tìm nút có aria-label là "Lưu ảnh"
+                if "lưu ảnh" in aria_label.lower():
+                    save_button = btn
+                    logging.info(f"Tìm thấy nút Lưu ảnh bằng aria-label: {aria_label}")
+                    break
+                # Hoặc tìm theo jslog
+                elif "14036" in jslog:
+                    save_button = btn
+                    logging.info(f"Tìm thấy nút Lưu ảnh bằng jslog: {jslog}")
+                    break
+    
+    # Nếu vẫn không tìm thấy, thử JavaScript
+    if not save_button:
+        logging.info("Thử tìm và click nút Lưu ảnh bằng JavaScript...")
+        try:
+            driver.execute_script("""
+                const buttons = Array.from(document.querySelectorAll('button'));
+                const saveButton = buttons.find(btn => {
+                    const ariaLabel = btn.getAttribute('aria-label');
+                    const jslog = btn.getAttribute('jslog');
+                    return (ariaLabel && ariaLabel.includes('Lưu ảnh')) || 
+                           (jslog && jslog.includes('14036'));
+                });
+                
+                if (saveButton) {
+                    console.log('Tìm thấy nút Lưu ảnh bằng JavaScript');
+                    // Scroll đến nút
+                    saveButton.scrollIntoView({behavior: 'smooth', block: 'center'});
+                    
+                    // Chờ một chút và click
+                    setTimeout(() => {
+                        try {
+                            saveButton.click();
+                            console.log('Đã click nút Lưu ảnh');
+                            return true;
+                        } catch(e) {
+                            console.error('Lỗi khi click:', e);
+                            return false;
+                        }
+                    }, 1000);
+                } else {
+                    console.log('Không tìm thấy nút Lưu ảnh bằng JavaScript');
+                    return false;
+                }
+            """)
+            logging.info("Đã thực thi JavaScript để tìm và click nút Lưu ảnh")
+            time.sleep(5)  # Đợi để JavaScript thực thi
+            driver.save_screenshot("after_js_click.png")
+        except Exception as e:
+            logging.error(f"Lỗi khi thực thi JavaScript: {str(e)}")
+    
+    # Nếu tìm thấy nút bằng Selenium, thử click
+    if save_button:
+        logging.info("Đang chuẩn bị click nút Lưu ảnh...")
+        
+        # Cuộn đến nút
+        driver.execute_script("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", save_button)
+        time.sleep(2)
+        
+        # Chụp ảnh trước khi click
+        driver.save_screenshot("before_save_click.png")
+        
+        # Thử các cách click khác nhau
+        try:
+            # Cách 1: Click thông thường
+            save_button.click()
+            logging.info("Đã click nút Lưu ảnh (cách 1)")
+        except Exception as e:
+            logging.warning(f"Lỗi khi click cách 1: {str(e)}")
+            try:
+                # Cách 2: Click bằng JavaScript
+                driver.execute_script("arguments[0].click();", save_button)
+                logging.info("Đã click nút Lưu ảnh (cách 2)")
+            except Exception as e:
+                logging.warning(f"Lỗi khi click cách 2: {str(e)}")
+                try:
+                    # Cách 3: Actions chains
+                    actions = ActionChains(driver)
+                    actions.move_to_element(save_button).pause(1).click().perform()
+                    logging.info("Đã click nút Lưu ảnh (cách 3)")
+                except Exception as e:
+                    logging.error(f"Lỗi khi click nút Lưu ảnh: {str(e)}")
+        
+        # Đợi xử lý sau khi click
+        time.sleep(5)
+        driver.save_screenshot("after_save_click.png")
+        
+        # Kiểm tra kết quả
+        try:
+            # Thử tìm hiện thị xác nhận đã lưu
+            save_confirm = driver.find_elements(By.XPATH, "//span[contains(text(), 'Đã lưu')]")
+            if save_confirm:
+                logging.info("Xác nhận đã lưu ảnh thành công!")
+            
+            # Kiểm tra trạng thái nút sau khi click
+            try:
+                svg_saved = driver.find_elements(By.XPATH, "//svg[contains(@class, 'PRE5') and not(contains(@style, 'display: none'))]")
+                if svg_saved:
+                    logging.info("Đã tìm thấy biểu tượng svg đã lưu!")
+            except:
+                pass
+        except Exception as e:
+            logging.warning(f"Không thể xác nhận trạng thái lưu: {str(e)}")
+    
     # Thêm thời gian đợi cuối để hoàn tất xử lý
     logging.info("Chờ xử lý hoàn tất...")
     time.sleep(5)

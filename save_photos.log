@@ -75,3 +75,44 @@ Stacktrace:
 #18 0x7c2c0ca94ac3 <unknown>
 
 2025-04-04 09:57:59,831 - INFO - Đã đóng WebDriver
+2025-04-04 10:06:04,065 - INFO - Đang khởi tạo WebDriver...
+2025-04-04 10:06:04,065 - INFO - ====== WebDriver manager ======
+2025-04-04 10:06:04,177 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 10:06:04,197 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 10:06:04,216 - INFO - Driver [/home/tthau/.wdm/drivers/chromedriver/linux64/135.0.7049.42/chromedriver-linux64/chromedriver] found in cache
+2025-04-04 10:06:04,571 - INFO - Thực hiện đăng nhập...
+2025-04-04 10:06:32,086 - INFO - Đang truy cập album: https://photos.app.goo.gl/13SDgSLQNZvE9dDQA
+2025-04-04 10:06:33,901 - INFO - Đợi trang album tải hoàn tất...
+2025-04-04 10:06:44,782 - INFO - Đang cố gắng click nút 'Lưu ảnh' bằng nhiều phương pháp...
+2025-04-04 10:06:44,972 - INFO - Tìm thấy nút 'Lưu ảnh' bằng XPath: //button[contains(@jslog, '14036')]
+2025-04-04 10:06:48,222 - INFO - Đã click nút 'Lưu ảnh' thông thường
+2025-04-04 10:06:56,459 - WARNING - Không thể kiểm tra trạng thái lưu: Message: javascript error: Cannot read properties of null (reading 'style')
+  (Session info: chrome=135.0.7049.52)
+Stacktrace:
+#0 0x57f52fcd7e6a <unknown>
+#1 0x57f52f789640 <unknown>
+#2 0x57f52f790246 <unknown>
+#3 0x57f52f792d97 <unknown>
+#4 0x57f52f82776e <unknown>
+#5 0x57f52f800752 <unknown>
+#6 0x57f52f8267b5 <unknown>
+#7 0x57f52f800523 <unknown>
+#8 0x57f52f7ccef3 <unknown>
+#9 0x57f52f7cdb51 <unknown>
+#10 0x57f52fc9cd2b <unknown>
+#11 0x57f52fca0c01 <unknown>
+#12 0x57f52fc84512 <unknown>
+#13 0x57f52fca1774 <unknown>
+#14 0x57f52fc6890f <unknown>
+#15 0x57f52fcc5fb8 <unknown>
+#16 0x57f52fcc6196 <unknown>
+#17 0x57f52fcd6cb6 <unknown>
+#18 0x7030d2894ac3 <unknown>
+
+2025-04-04 10:06:56,531 - INFO - Đã đóng WebDriver
+2025-04-04 10:10:52,894 - INFO - Đang khởi tạo WebDriver...
+2025-04-04 10:10:52,894 - INFO - ====== WebDriver manager ======
+2025-04-04 10:10:52,985 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 10:10:53,001 - INFO - Get LATEST chromedriver version for google-chrome
+2025-04-04 10:10:53,017 - INFO - Driver [/home/tthau/.wdm/drivers/chromedriver/linux64/135.0.7049.42/chromedriver-linux64/chromedriver] found in cache
+2025-04-04 10:10:53,461 - INFO - Thực hiện đăng nhập...
