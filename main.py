@@ -11,6 +11,8 @@ from config.settings import GOOGLE_EMAIL, GOOGLE_PASSWORD, ALBUM_URL, HEADLESS_M
 from auth.google_auth import GoogleAuth
 from api.photos_api import GooglePhotosAPI
 from automation.browser import Browser
+from automation.google_login import GoogleLogin
+from automation.album_handler import AlbumHandler
 from utils.logging_utils import setup_global_logging, get_logger
 from utils.file_utils import ensure_dir_exists
 
@@ -65,26 +67,30 @@ def clone_album(album_url=None):
         browser = Browser(headless=HEADLESS_MODE, screenshots_dir=SCREENSHOTS_DIR)
         browser.start()
         
+        # Khởi tạo các handler
+        login_handler = GoogleLogin(browser)
+        album_handler = AlbumHandler(browser)
+        
         # Đăng nhập
         logger.info(f"Đăng nhập với tài khoản {GOOGLE_EMAIL}")
-        if not browser.login(GOOGLE_EMAIL, GOOGLE_PASSWORD):
+        if not login_handler.login(GOOGLE_EMAIL, GOOGLE_PASSWORD):
             logger.error("Đăng nhập thất bại")
             browser.close()
             return False
         
         # Truy cập trang chủ Google Photos (tùy chọn)
-        browser.visit_photos_homepage()
+        album_handler.visit_photos_homepage()
         
         # Truy cập album
         logger.info(f"Truy cập album: {album_url}")
-        if not browser.access_album(album_url):
+        if not album_handler.access_album(album_url):
             logger.error("Không thể truy cập album")
             browser.close()
             return False
         
         # Lưu ảnh
         logger.info("Đang lưu ảnh từ album")
-        if not browser.save_photos():
+        if not album_handler.save_photos():
             logger.error("Không thể lưu ảnh")
             browser.close()
             return False
